@@ -11,5 +11,5 @@ public final class BuildConfig {
   public static final int VERSION_CODE = 1;
   public static final String VERSION_NAME = "1.0";
   // Fields from default config.
-  public static final String GithubAPIKEY = "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";
+  public static final String GithubAPIKEY = "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";
 }

@@ -1,0 +1,157 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.dicoding.submission.githubapp"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:6:5-67
+11-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:6:22-64
+12    <uses-permission android:name="android.permission.WAKE_LOCK" />
+12-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:7:5-68
+12-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:7:22-65
+13    <uses-permission android:name="android.permission.VIBRATE" />
+13-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:8:5-66
+13-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:8:22-63
+14    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+14-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:9:5-80
+14-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:9:22-78
+15
+16    <permission
+16-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:11:5-13:44
+17        android:name="com.dicoding.submission.githubapp.READ_DATABASE"
+17-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:12:9-71
+18        android:protectionLevel="normal" />
+18-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:13:9-41
+19    <permission
+19-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:14:5-16:44
+20        android:name="com.dicoding.submission.githubapp.WRITE_DATABASE"
+20-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:15:9-72
+21        android:protectionLevel="normal" />
+21-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:16:9-41
+22
+23    <application
+23-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:18:5-74:19
+24        android:name="com.dicoding.submission.githubapp.database.inspector.MyApplication"
+24-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:19:9-90
+25        android:allowBackup="true"
+25-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:20:9-35
+26        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+26-->[androidx.core:core:1.3.2] C:\Users\andip\.gradle\caches\transforms-2\files-2.1\0c3dd63f1a6ceed02d76d316295e73bb\core-1.3.2\AndroidManifest.xml:24:18-86
+27        android:debuggable="true"
+28        android:icon="@mipmap/github_logo"
+28-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:21:9-43
+29        android:label="@string/app_name"
+29-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:22:9-41
+30        android:roundIcon="@mipmap/github_logo"
+30-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:23:9-48
+31        android:supportsRtl="true"
+31-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:24:9-35
+32        android:testOnly="true"
+33        android:theme="@style/AppTheme" >
+33-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:25:9-40
+34        <service
+34-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:27:9-31:90
+35            android:name="com.dicoding.submission.githubapp.service.StackWidgetService"
+35-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:28:13-88
+36            android:enabled="true"
+36-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:29:13-35
+37            android:exported="true"
+37-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:30:13-36
+38            android:permission="com.com.dicoding.submission.githubapp.BIND_REMOTEVIEWS" />
+38-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:31:13-88
+39
+40        <receiver android:name="com.dicoding.submission.githubapp.view.widget.FavoritesStackWidget" >
+40-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:33:9-42:20
+40-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:33:19-100
+41            <intent-filter>
+41-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:35:13-37:29
+42                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+42-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:36:17-84
+42-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:36:25-81
+43            </intent-filter>
+44
+45            <meta-data
+45-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:39:13-41:71
+46                android:name="android.appwidget.provider"
+46-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:40:17-58
+47                android:resource="@xml/favorites_stack_widget_info" />
+47-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:41:17-68
+48        </receiver>
+49        <receiver
+49-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:43:9-50:20
+50            android:name="com.dicoding.submission.githubapp.service.AlarmReceiver"
+50-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:44:13-83
+51            android:enabled="true"
+51-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:45:13-35
+52            android:exported="true" >
+52-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:46:13-36
+53            <intent-filter>
+53-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:47:13-49:29
+54                <action android:name="android.intent.action.BOOT_COMPLETED" />
+54-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:48:17-79
+54-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:48:25-76
+55            </intent-filter>
+56        </receiver>
+57
+58        <activity android:name="com.dicoding.submission.githubapp.view.SettingsActivity" />
+58-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:52:9-92
+58-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:52:19-89
+59
+60        <provider
+60-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:54:9-60:94
+61            android:name="com.dicoding.submission.githubapp.provider.UserFavoriteProvider"
+61-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:55:13-91
+62            android:authorities="com.dicoding.submission.githubapp"
+62-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:56:13-68
+63            android:enabled="true"
+63-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:57:13-35
+64            android:exported="true"
+64-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:58:13-36
+65            android:readPermission="com.com.dicoding.submission.githubapp.READ_DATABASE"
+65-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:59:13-89
+66            android:writePermission="com.com.dicoding.submission.githubapp.WRITE_DATABASE" />
+66-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:60:13-91
+67
+68        <activity
+68-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:62:9-72:20
+69            android:name="com.dicoding.submission.githubapp.view.SplashScreenActivity"
+69-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:63:13-87
+70            android:screenOrientation="portrait"
+70-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:64:13-49
+71            android:theme="@style/AppThemeSplashScreen" >
+71-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:65:13-56
+72            <intent-filter>
+72-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:67:13-71:29
+73                <action android:name="android.intent.action.MAIN" />
+73-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:68:17-69
+73-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:68:25-66
+74
+75                <category android:name="android.intent.category.LAUNCHER" />
+75-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:70:17-77
+75-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:70:27-74
+76            </intent-filter>
+77        </activity>
+78        <activity android:name="com.dicoding.submission.githubapp.view.MainActivity" />
+78-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:73:9-88
+78-->D:\AndroidProject\GitHubApp6\app\src\main\AndroidManifest.xml:73:19-85
+79
+80        <provider
+80-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\andip\.gradle\caches\transforms-2\files-2.1\e1104d4ef2d81cccb508cd7fc5739bc6\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+81            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+81-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\andip\.gradle\caches\transforms-2\files-2.1\e1104d4ef2d81cccb508cd7fc5739bc6\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
+82            android:authorities="com.dicoding.submission.githubapp.lifecycle-process"
+82-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\andip\.gradle\caches\transforms-2\files-2.1\e1104d4ef2d81cccb508cd7fc5739bc6\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+83            android:exported="false"
+83-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\andip\.gradle\caches\transforms-2\files-2.1\e1104d4ef2d81cccb508cd7fc5739bc6\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+84            android:multiprocess="true" />
+84-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\andip\.gradle\caches\transforms-2\files-2.1\e1104d4ef2d81cccb508cd7fc5739bc6\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+85    </application>
+86
+87</manifest>

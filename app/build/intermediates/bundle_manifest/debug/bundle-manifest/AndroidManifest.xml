@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dicoding.submission.githubapp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="33" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <permission
+        android:name="com.dicoding.submission.githubapp.READ_DATABASE"
+        android:protectionLevel="normal" />
+    <permission
+        android:name="com.dicoding.submission.githubapp.WRITE_DATABASE"
+        android:protectionLevel="normal" />
+
+    <application
+        android:name="com.dicoding.submission.githubapp.database.inspector.MyApplication"
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:icon="@mipmap/github_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/github_logo"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/AppTheme" >
+        <service
+            android:name="com.dicoding.submission.githubapp.service.StackWidgetService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="com.com.dicoding.submission.githubapp.BIND_REMOTEVIEWS" />
+
+        <receiver android:name="com.dicoding.submission.githubapp.view.widget.FavoritesStackWidget" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/favorites_stack_widget_info" />
+        </receiver>
+        <receiver
+            android:name="com.dicoding.submission.githubapp.service.AlarmReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.dicoding.submission.githubapp.view.SettingsActivity" />
+
+        <provider
+            android:name="com.dicoding.submission.githubapp.provider.UserFavoriteProvider"
+            android:authorities="com.dicoding.submission.githubapp"
+            android:enabled="true"
+            android:exported="true"
+            android:readPermission="com.com.dicoding.submission.githubapp.READ_DATABASE"
+            android:writePermission="com.com.dicoding.submission.githubapp.WRITE_DATABASE" />
+
+        <activity
+            android:name="com.dicoding.submission.githubapp.view.SplashScreenActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSplashScreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.dicoding.submission.githubapp.view.MainActivity" />
+
+        <provider
+            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:authorities="com.dicoding.submission.githubapp.lifecycle-process"
+            android:exported="false"
+            android:multiprocess="true" />
+    </application>
+
+</manifest>
